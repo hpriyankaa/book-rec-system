@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Set Reading Challenge</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css">
+
+</head>
+<body>
+  <style>
+    /* General Text Styling */
+    .text-white {
+        color: #5C5C5C;
+        font-family: "Lucida Console", "Courier New", monospace;
+        margin: 5px 0;
+        font-weight: bold;
+    }
+
+    /* Navbar Styling */
+    #texxt {
+        color: white;
+    }
+    .navbar {
+        background-color: #7E5A9B;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+    .navbar-brand {
+        font-size: 25px;
+        font-weight: bold;
+        color: white;
+    }
+    .navbar-nav > li > a {
+        font-size: 18px;
+        color: white !important;
+        font-weight: bold;
+        transition: background-color 0.3s ease, color 0.3s ease;
+    }
+    .navbar-nav > li > a:hover {
+        background-color: #F5B7B1;
+        color: white !important;
+        border-radius: 20px;
+        padding: 5px 15px;
+    }
+
+    /* Card Styling */
+    .card {
+        border: 1px solid #ddd;
+        border-radius: 10px;
+        padding: 15px;
+        transition: transform 0.3s ease, background-color 0.3s ease;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        text-align: center;
+        height: 100%;
+        background-color: #FADADD; /* Match card background to page */
+    }
+    .card:hover {
+        transform: scale(1.05);
+        background-color: #F7A5A6; /* Slightly darker pink on hover */
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    }
+
+    /* Card Image Styling */
+    .card-img-top {
+        width: 100%;
+        height: 300px;
+        object-fit: cover;
+        border-radius: 8px;
+    }
+
+    /* Text and Badge Styling inside Card */
+    h4, p {
+        font-size: 16px;
+        margin: 10px 0;
+    }
+    .badge-rating {
+        background-color: #f39c12;
+        color: white;
+        padding: 5px 10px;
+        font-size: 12px;
+        border-radius: 20px;
+        margin-bottom: 10px;
+    }
+    .badge-votes {
+        background-color: #3498db;
+        color: white;
+        padding: 5px 10px;
+        font-size: 12px;
+        border-radius: 20px;
+        margin-bottom: 10px;
+        margin-top: 10px; /* Extra space between rating and votes */
+    }
+
+    /* Flexbox for Layout */
+    .row {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .col-md-3 {
+        margin-bottom: 30px;
+    }
+
+</style>
+<body style="background-color: #FADADD">
+
+    <!-- Navbar Section -->
+    <nav class="navbar">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand" id="texxt">My Book Recommender</a>
+            </div>
+            <ul class="nav navbar-nav">
+                <li><a href="/" id="texxt">Home</a></li>
+                <li><a href="/recommend" id="texxt">Recommend</a></li>
+                <li><a href="/contact" id="texxt">Contact</a></li>
+                <li><a href="/set_challenge" id="texxt">Set Challenges</a></li>
+                <li><a href="/view_challenges" id="texxt">View Challenges</a></li>
+
+            </ul>
+        </div>
+    </nav>
+    <div class="container">
+        <h1 class="text-white">Set a New Reading Challenge</h1>
+        <form action="/set_challenge" method="post">
+            <div class="form-group">
+                <label for="description" class="text-white">Challenge Description</label>
+                <input type="text" name="description" class="form-control" required>
+            </div>
+            <div class="form-group">
+                <label for="target_books" class="text-white">Target Number of Books</label>
+                <input type="number" name="target_books" class="form-control" required>
+            </div>
+            <div class="form-group">
+                <label for="end_date" class="text-white">End Date</label>
+                <input type="date" name="end_date" class="form-control" required>
+            </div>
+            <button type="submit" class="btn btn-lg btn-warning">Set Challenge</button>
+        </form>
+    </div>
+</body>
+</html>
