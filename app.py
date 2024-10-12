@@ -54,23 +54,6 @@ def recommend():
     return render_template('recommend.html', data=data)
 
 
-@app.route('/contact')
-def contact():
-    return render_template('contact.html')
-
-
-@app.route('/submit_contact', methods=['POST'])
-def submit_contact():
-    name = request.form.get('name')
-    email = request.form.get('email')
-    message = request.form.get('message')
-
-    # You can process/store the form data here
-    print(f"Received message from {name}, Email: {email}, Message: {message}")
-
-    return 'Thank you for reaching out! We will get back to you soon.'
-
-
 @app.route('/set_challenge', methods=['GET', 'POST'])
 def set_challenge():
     if request.method == 'POST':
@@ -92,6 +75,23 @@ def set_challenge():
         return redirect(url_for('view_challenges'))
 
     return render_template('set_challenge.html')
+
+
+@app.route('/contact')
+def contact():
+    return render_template('contact.html')
+
+
+@app.route('/submit_contact', methods=['POST'])
+def submit_contact():
+    name = request.form.get('name')
+    email = request.form.get('email')
+    message = request.form.get('message')
+
+    # You can process/store the form data here
+    print(f"Received message from {name}, Email: {email}, Message: {message}")
+
+    return 'Thank you for reaching out! We will get back to you soon.'
 
 
 @app.route('/view_challenges')

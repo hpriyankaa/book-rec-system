@@ -6,36 +6,31 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 </head>
- 
-<body>
 <style>
-    /* General Text Styling */
-    .text-white {
-        color: #5C5C5C;
-        font-family: "Lucida Console", "Courier New", monospace;
-        margin: 5px 0;
-        font-weight: bold;
-    }
-
-    /* Navbar Styling */
-    #texxt {
+     #texxt {
         color: white;
     }
-    .navbar {
-        background-color: #7E5A9B;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    /* General Styling */
+    body {
+        background-color: #FADADD;
+        font-family: "Lucida Console", "Courier New", monospace;
     }
-    .navbar-brand {
+
+    .navbar {
         font-size: 25px;
         font-weight: bold;
         color: white;
+        background-color: #7E5A9B;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     }
-    .navbar-nav > li > a {
+
+    .navbar-brand, .navbar-nav > li > a {
         font-size: 18px;
         color: white !important;
         font-weight: bold;
         transition: background-color 0.3s ease, color 0.3s ease;
     }
+
     .navbar-nav > li > a:hover {
         background-color: #F5B7B1;
         color: white !important;
@@ -43,68 +38,43 @@
         padding: 5px 15px;
     }
 
-    /* Card Styling */
-    .card {
-        border: 1px solid #ddd;
+    .contact-container {
+        background-color: white;
         border-radius: 10px;
-        padding: 15px;
-        transition: transform 0.3s ease, background-color 0.3s ease;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+        padding: 30px;
+        margin-top: 50px;
+    }
+
+    h2 {
+        color: #7E5A9B;
         text-align: center;
-        height: 100%;
-        background-color: #FADADD; /* Match card background to page */
-    }
-    .card:hover {
-        transform: scale(1.05);
-        background-color: #F7A5A6; /* Slightly darker pink on hover */
-        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
-    }
-
-    /* Card Image Styling */
-    .card-img-top {
-        width: 100%;
-        height: 300px;
-        object-fit: cover;
-        border-radius: 8px;
-    }
-
-    /* Text and Badge Styling inside Card */
-    h4, p {
-        font-size: 16px;
-        margin: 10px 0;
-    }
-    .badge-rating {
-        background-color: #f39c12;
-        color: white;
-        padding: 5px 10px;
-        font-size: 12px;
-        border-radius: 20px;
-        margin-bottom: 10px;
-    }
-    .badge-votes {
-        background-color: #3498db;
-        color: white;
-        padding: 5px 10px;
-        font-size: 12px;
-        border-radius: 20px;
-        margin-bottom: 10px;
-        margin-top: 10px; /* Extra space between rating and votes */
-    }
-
-    /* Flexbox for Layout */
-    .row {
-        display: flex;
-        flex-wrap: wrap;
-    }
-    .col-md-3 {
+        font-weight: bold;
         margin-bottom: 30px;
     }
 
-</style>
-<body style="background-color: #FADADD">
+    .form-control {
+        border-radius: 5px;
+        margin-bottom: 20px;
+        padding: 10px;
+    }
 
-    <!-- Navbar Section -->
-    <nav class="navbar">
+    .btn-submit {
+        background-color: #7E5A9B;
+        color: white;
+        border-radius: 20px;
+        padding: 10px 20px;
+        font-size: 16px;
+        display: block;
+        width: 100%;
+    }
+
+    .btn-submit:hover {
+        background-color: #5A4279;
+    }
+</style>
+<body>
+ <nav class="navbar">
         <div class="container-fluid">
             <div class="navbar-header">
                 <a class="navbar-brand" id="texxt">My Book Recommender</a>
@@ -119,6 +89,7 @@
             </ul>
         </div>
     </nav>
+
     <!-- Contact Form -->
     <div class="container">
         <div class="row">
